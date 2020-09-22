@@ -24,7 +24,7 @@ export class EmployeeApiService {
 
   // HttpClient API get() method employees list
   getEmployees(): Observable<Employee> {
-    return this.http.get<Employee>(this.apiURL + '/get/employees/')
+    return this.http.get<Employee>(this.apiURL + '/get/employees')
     .pipe(
       retry(1),
       catchError(this.handleError)
@@ -32,7 +32,7 @@ export class EmployeeApiService {
   }
   // HttpClient API get() method employees list
   getCompanies(): Observable<Employee> {
-    return this.http.get<Employee>(this.apiURL + '/get/companies/')
+    return this.http.get<Employee>(this.apiURL + '/get/companies')
     .pipe(
       retry(1),
       catchError(this.handleError)
