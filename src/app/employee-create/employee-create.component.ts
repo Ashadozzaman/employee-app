@@ -10,6 +10,7 @@ import { ActivatedRoute, Router , ParamMap} from '@angular/router';
 export class EmployeeCreateComponent implements OnInit {
   @Input() employeeDetails = { name: '', email: '', companyId: 0 }
   companies = [];
+  dataEmployee = [];
   constructor(
     public restApi: EmployeeApiService,
     public router: Router
